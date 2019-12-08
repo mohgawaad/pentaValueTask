@@ -56,7 +56,7 @@ const routeConfigs = {
     screen: ServicesNavigator,
     navigationOptions: {
       tabBarOptions: {
-        activeTintColor: '#e91e63',
+        activeTintColor: 'rgba(44,136,232,1)',
         tintColor: 'red',
         showLabel: false,
       },
@@ -70,7 +70,7 @@ const routeConfigs = {
     navigationOptions: {
       tabBarOptions: {
         showLabel: false,
-        activeTintColor: 'tomato',
+        activeTintColor: 'rgba(44,136,232,1)',
         inactiveTintColor: 'gray',
       },
       tabBarIcon: ({focused, tintColor}) => {
@@ -83,7 +83,7 @@ const routeConfigs = {
     navigationOptions: {
       tabBarOptions: {
         showLabel: false,
-        activeTintColor: 'tomato',
+        activeTintColor: 'rgba(44,136,232,1)',
         inactiveTintColor: 'gray',
       },
       tabBarIcon: ({focused, tintColor}) => {
@@ -96,7 +96,7 @@ const routeConfigs = {
     navigationOptions: {
       tabBarOptions: {
         showLabel: false,
-        activeTintColor: 'tomato',
+        activeTintColor: 'rgba(44,136,232,1)',
         inactiveTintColor: 'gray',
       },
       tabBarIcon: ({focused, tintColor}) => {

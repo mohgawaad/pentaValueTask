@@ -11,15 +11,15 @@ import {
   ScrollView,
   FlatList,
 } from 'react-native';
-import {Card} from '../components/Card';
+import {Card} from '../../components/Card';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import {SafeAreaView} from 'react-navigation';
-import {HeaderDel} from '../components/HeaderDel';
-import {Persons} from '../components/Persons';
-import {Search} from '../components/Search';
+import {HeaderDel} from '../../components/HeaderDel';
+import {Persons} from '../../components/Persons';
+import {Search} from '../../components/Search';
 //import {useNavigationParam} from 'react-navigation-hooks';
 import SortableGrid from 'react-native-sortable-grid';
-import {RowRepository, Board} from '../react-native-draggable-board';
+import {RowRepository, Board} from '../../react-native-draggable-board';
 
 const DATA = [
   {
@@ -181,22 +181,13 @@ _renderItem2 = ({item}) => {
               width: 40,
               height: 40,
               backgroundColor: 'rgba(222,232,253,1)',
-              //borderWidth: 2,
               borderRadius: 10,
               alignItems: 'center',
               justifyContent: 'center',
-              //borderColor: 'rgba(62,133,247,1)',
               marginHorizontal: 5,
             }}
-            onPress={() => {
-              //this.props.navigation.navigate('SwiperImages');
-            }}>
-            <Icon
-              //style={{backgroundColor:'white'}}
-              name="plus"
-              size={25}
-              color={'rgba(97,134,154,1)'}
-            />
+            onPress={() => {}}>
+            <Icon name="plus" size={25} color={'rgba(97,134,154,1)'} />
           </TouchableOpacity>
           <TouchableOpacity
             style={{
@@ -207,15 +198,8 @@ _renderItem2 = ({item}) => {
               alignItems: 'center',
               justifyContent: 'center',
             }}
-            onPress={() => {
-              //this.props.navigation.navigate('SwiperImages');
-            }}>
-            <Icon
-              //style={{padding: 20}}
-              name="ellipsis-v"
-              size={25}
-              color={'rgba(97,134,154,1)'}
-            />
+            onPress={() => {}}>
+            <Icon name="ellipsis-v" size={25} color={'rgba(97,134,154,1)'} />
           </TouchableOpacity>
         </View>
       </View>
@@ -246,7 +230,10 @@ class HomeDetails extends Component {
     const {id} = name;
     return (
       <SafeAreaView style={{flex: 1, backgroundColor: 'rgba(247,247,255,1)'}}>
-        <StatusBar backgroundColor="blue" barStyle="light-content" />
+        <StatusBar
+          backgroundColor="rgba(44,136,232,1)"
+          barStyle="light-content"
+        />
         <View
           style={{
             paddingBottom: 30,
@@ -254,9 +241,7 @@ class HomeDetails extends Component {
             marginVertical: 10,
             borderBottomLeftRadius: 30,
             borderBottomRightRadius: 30,
-            // borderWidth: 10,
             backgroundColor: 'white',
-            /// borderColor: 'red',
           }}>
           <HeaderDel name={name} />
           <Text style={{fontSize: 35, fontWeight: 'bold'}}>{name.title}</Text>

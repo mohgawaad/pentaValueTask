@@ -10,10 +10,12 @@ import {
   Dimensions,
 } from 'react-native';
 //import {Card} from '../components/Card';
-import {Task} from '../components/Task';
+import {Task} from '../../components/Task';
+import {Styles} from './style';
+
 //import Icon from 'react-native-vector-icons/FontAwesome5';
 import {ScrollView} from 'react-native-gesture-handler';
-import {Search} from '../components/Search';
+import {Search} from '../../components/Search';
 import {TabView, SceneMap, TabBar} from 'react-native-tab-view';
 import {SafeAreaView} from 'react-navigation';
 
@@ -77,14 +79,16 @@ class Home extends Component {
   render() {
     return (
       <SafeAreaView style={{flex: 1}}>
+        <StatusBar
+          backgroundColor="rgba(44,136,232,1)"
+          barStyle="light-content"
+        />
+
         <View style={{backgroundColor: 'rgba(247,247,255,1)', flex: 1}}>
           <ScrollView
             style={{
-              //alignItems: 'center',
-              //backgroundColor: '#E96152',
               flex: 1,
-              //  marginVertical: 20,
-              //    marginHorizontal: 16,
+
               borderRadius: 10,
             }}>
             <View style={{backgroundColor: 'white', paddingHorizontal: 30}}>
@@ -98,13 +102,11 @@ class Home extends Component {
                   style={{
                     width: 40,
                     height: 40,
-                    //backgroundColor: 'red',
                     backgroundColor: 'white',
                     borderRadius: 15,
                     borderWidth: 2,
                     borderColor: 'rgba(238,243,247,1)',
                     flexDirection: 'row',
-                    //alignContent: 'space-between',
                     justifyContent: 'space-around',
                     paddingHorizontal: 5,
                     paddingVertical: 4,
@@ -114,7 +116,6 @@ class Home extends Component {
                       width: 10,
                       height: 20,
                       backgroundColor: 'rgba(46,208,251,1)',
-                      //borderRadius: 15,alignContent: 'space-between',
                       borderBottomEndRadius: 10,
                       borderBottomLeftRadius: 10,
                       borderTopLeftRadius: 10,
@@ -126,9 +127,7 @@ class Home extends Component {
                       width: 10,
                       height: 20,
                       backgroundColor: 'rgba(52,133,239,1)',
-                      //borderRadius: 15,
                       borderBottomEndRadius: 10,
-                      //borderBottomLeftRadius: 10,
                       borderTopLeftRadius: 10,
                       borderTopRightRadius: 10,
                     }}
@@ -328,83 +327,3 @@ const styles = StyleSheet.create({
 });
 
 export {Home};
-
-// import React, {Component} from 'react';
-// import {StyleSheet, Text, View} from 'react-native';
-
-// import SortableGrid from 'react-native-sortable-grid';
-
-// export class Home extends Component {
-//   constructor() {
-//     super();
-//     this.alphabets = [
-//       'A',
-//       'B',
-//       'C',
-//       'D',
-//       'E',
-//       'F',
-//       'G',
-//       'H',
-//       'I',
-//       'J',
-//       'K',
-//       'L',
-//       'M',
-//       'N',
-//       'O',
-//       'P',
-//       'Q',
-//       'R',
-//       'S',
-//       'T',
-//       'U',
-//       'V',
-//       'W',
-//       'X',
-//     ];
-//   }
-
-//   getColor() {
-//     let r = this.randomRGB();
-//     let g = this.randomRGB();
-//     let b = this.randomRGB();
-//     return 'rgb(' + r + ', ' + g + ', ' + b + ')';
-//   }
-//   randomRGB = () => 160 + Math.random() * 85;
-
-//   render() {
-//     return (
-//       <SortableGrid
-//         blockTransitionDuration={400}
-//         activeBlockCenteringDuration={200}
-//         itemsPerRow={4}
-//         dragActivationTreshold={200}
-//         onDragRelease={itemOrder =>
-//           console.log(
-//             'Drag was released, the blocks are in the following order: ',
-//             itemOrder,
-//           )
-//         }
-//         onDragStart={() => console.log('Some block is being dragged now!')}>
-//         {this.alphabets.map((letter, index) => (
-//           <View
-//             key={index}
-//             style={[styles.block, {backgroundColor: this.getColor()}]}>
-//             <Text style={{color: 'white', fontSize: 50}}>ewewe</Text>
-//           </View>
-//         ))}
-//       </SortableGrid>
-//     );
-//   }
-// }
-
-// const styles = StyleSheet.create({
-//   block: {
-//     flex: 1,
-//     margin: 8,
-//     borderRadius: 20,
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//   },
-// });
