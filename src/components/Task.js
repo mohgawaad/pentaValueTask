@@ -1,13 +1,5 @@
-import React, {Component} from 'react';
-import {
-  Platform,
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  TouchableOpacity,
-  Dimensions,
-} from 'react-native';
+import React from 'react';
+import {Text, View} from 'react-native';
 import {Card} from './Card';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import {useNavigation} from 'react-navigation-hooks';
@@ -37,48 +29,35 @@ const Facebook = [
 const Task = () => {
   const {navigate} = useNavigation();
   const renderTask = (key, iconName, title) => {
+    const {
+      containerStyle,
+      iconContainer,
+      txtStyle1,
+      cardStyle,
+      blockStyle,
+      txtStyle2,
+      txtStyle3,
+    } = styles;
     return (
       <View>
-        <View
-          style={{marginTop: 15, marginHorizontal: 16, flexDirection: 'row'}}>
-          <View
-            style={{
-              width: 50,
-              height: 50,
-              backgroundColor: 'white',
-              borderRadius: 30,
-              alignItems: 'center',
-              justifyContent: 'center',
-              marginHorizontal: 20,
-            }}>
-            <Icon
-              name={iconName} // === 'Google' ? 'google' : 'facebook'}
-              size={25}
-              color={'gray'}
-            />
+        <View style={containerStyle}>
+          <View style={iconContainer}>
+            <Icon name={iconName} size={25} color={'gray'} />
           </View>
 
-          <View style={{}}>
-            <Text style={{fontSize: 35, fontWeight: 'bold'}}>{title}</Text>
+          <View>
+            <Text style={txtStyle1}>{title}</Text>
           </View>
         </View>
         {key.map(res => (
-          <View style={{marginHorizontal: 30, marginVertical: 15}}>
+          <View style={blockStyle}>
             <Card
-              style={{
-                height: 100,
-                width: '100%',
-                borderRadius: 20,
-                alignItems: 'flex-start',
-                padding: 5,
-              }}
+              style={cardStyle}
               myNavigation={() => {
                 navigate('HomeDetails', {item: res});
               }}>
-              <Text style={{fontSize: 20, padding: 5, fontWeight: 'bold'}}>
-                {res.title}
-              </Text>
-              <Text style={{fontSize: 17, padding: 5}}>{res.member}</Text>
+              <Text style={txtStyle2}>{res.title}</Text>
+              <Text style={txtStyle3}>{res.member}</Text>
             </Card>
           </View>
         ))}
@@ -96,35 +75,42 @@ const Task = () => {
 
 const styles = {
   containerStyle: {
-    // /* height:40, */
-    // borderWidth: 1,
-    // borderRadius: 2,
-    // borderColor: '#ddd',
-    // borderBottomWidth: 0,
-    // shadowColor: '#000',
-    // shadowOffset: { width: 0, height: 2 },
-    // shadowOpacity: 0.1,
-    // shadowRadius: 2,
-    // elevation: 1,
-    // marginLeft: 5,
-    // marginRight: 5,
-    // //marginTop: 10,
-    // width:Dimensions.get('window').width  *.9,
-    // //backgroundColor:'white'
-    shadowColor: '#000',
-
-    shadowOpacity: 0.1,
-    shadowRadius: 13.97,
-
-    elevation: 2,
-    width: 150,
-    height: 150,
-    backgroundColor: '#fff',
-    justifyContent: 'center',
-    alignItems: 'center',
+    marginTop: 15,
+    marginHorizontal: 16,
+    flexDirection: 'row',
   },
-  TextStyle: {
+  iconContainer: {
+    width: 50,
+    height: 50,
+    backgroundColor: 'white',
+    borderRadius: 30,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginHorizontal: 20,
+  },
+  txtStyle1: {
+    fontSize: 35,
+    fontWeight: 'bold',
+  },
+  cardStyle: {
+    height: 100,
+    width: '100%',
+    borderRadius: 20,
+    alignItems: 'flex-start',
+    padding: 5,
+  },
+  blockStyle: {
+    marginHorizontal: 30,
+    marginVertical: 15,
+  },
+  txtStyle2: {
     fontSize: 20,
+    padding: 5,
+    fontWeight: 'bold',
+  },
+  txtStyle3: {
+    fontSize: 17,
+    padding: 5,
   },
 };
 

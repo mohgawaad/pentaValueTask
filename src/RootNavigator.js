@@ -16,10 +16,6 @@ const bottomTabNavigatorConfig = {
     showLabel: true,
     activeTintColor: 'red',
     inactiveTintColor: 'gray',
-    // style: BaseStyle.tabBar,
-    // labelStyle: {
-    //     fontSize: 12
-    // }
   },
 };
 const ServicesNavigator = createStackNavigator({
@@ -106,66 +102,6 @@ const routeConfigs = {
   },
 };
 
-const AppNavigator333 = createBottomTabNavigator(
-  {
-    Sc1: {
-      screen: ServicesNavigator,
-      navigationOptions: {
-        tabBarOptions: {
-          activeTintColor: '#e91e63',
-          tintColor: 'red',
-          showLabel: false,
-        },
-        tabBarIcon: () => <Icon name="cut" size={17} />,
-      },
-    },
-    Sc2: {
-      screen: Sc1,
-      navigationOptions: {
-        tabBarOptions: {
-          showLabel: false,
-          activeTintColor: 'tomato',
-          inactiveTintColor: 'gray',
-        },
-        tabBarIcon: () => <Icon name="address-book" size={17} />,
-      },
-    },
-    Sc3: {
-      screen: Sc1,
-      navigationOptions: {
-        tabBarOptions: {
-          showLabel: false,
-          activeTintColor: 'tomato',
-          inactiveTintColor: 'gray',
-        },
-        tabBarIcon: () => <Icon name="address-book" size={17} />,
-      },
-    },
-    Sc4: {
-      screen: Sc1,
-      navigationOptions: {
-        tabBarOptions: {
-          showLabel: false,
-          activeTintColor: 'tomato',
-          inactiveTintColor: 'gray',
-        },
-        tabBarIcon: () => <Icon name="address-book" size={17} />,
-      },
-    },
-  },
-
-  {
-    defaultNavigationOptions: ({navigation}) => ({
-      tabBarIcon: ({focused, tintColor}) =>
-        getTabBarIcon(navigation, focused, tintColor),
-    }),
-    tabBarOptions: {
-      activeTintColor: 'red',
-      inactiveTintColor: 'gray',
-    },
-  },
-);
-
 const AppNavigator = createBottomTabNavigator(
   routeConfigs,
   bottomTabNavigatorConfig,
@@ -173,7 +109,6 @@ const AppNavigator = createBottomTabNavigator(
 //--------------------------------------------
 const switcher = createSwitchNavigator({
   first: AppNavigator,
-  // second: AppNavigator2
 });
 
 export default createAppContainer(switcher);

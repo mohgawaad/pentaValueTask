@@ -15,6 +15,8 @@
     "react": "16.9.0",
     "react-native": "0.61.0",
     "react-native-drag-drop-and-swap": "^0.1.6",
+    "react-native-draggable-board": "^1.1.1",
+    "react-native-draggable-flatlist": "^1.1.9",
     "react-native-gesture-handler": "^1.5.2",
     "react-native-reanimated": "^1.4.0",
     "react-native-safe-area-context": "^0.6.1",
@@ -24,8 +26,7 @@
     "react-navigation": "^4.0.10",
     "react-navigation-hooks": "^1.1.0",
     "react-navigation-stack": "^1.10.3",
-    "react-navigation-tabs": "^2.6.2",
-    "react-native-draggable-board": "^1.1.1"
+    "react-navigation-tabs": "^2.6.2"
   },
   "devDependencies": {
     "@babel/core": "^7.7.4",

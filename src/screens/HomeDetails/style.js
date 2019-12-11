@@ -1,15 +1,106 @@
-import { StyleSheet } from 'react-native'
+import {StyleSheet} from 'react-native';
 
- 
- 
 export const Styles = StyleSheet.create({
-   
-    loginStyle: {
-        
-    },
-    loginText: {
-        
-    },
-  
-    
-})
+  container: {
+    flex: 1,
+    backgroundColor: 'rgba(247,247,255,1)',
+  },
+  block1: {
+    paddingBottom: 30,
+    paddingHorizontal: 16,
+    marginVertical: 10,
+    borderBottomLeftRadius: 30,
+    borderBottomRightRadius: 30,
+    backgroundColor: 'white',
+  },
+  txtStyle: {
+    fontSize: 35,
+    fontWeight: 'bold',
+  },
+  iconContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: 50,
+    height: 40,
+    borderRadius: 15,
+    borderWidth: 2,
+    backgroundColor: 'rgba(247,247,254,1)',
+    borderColor: 'rgba(215,215,216,1)',
+    marginLeft: 30,
+    marginHorizontal: 10,
+  },
+  directionContainer: {
+    flexDirection: 'row',
+    width: 80,
+    height: 40,
+    backgroundColor: 'rgba(61,136,239,1)',
+    borderRadius: 10,
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: 10,
+  },
+  sperateContainer: {
+    fontWeight: 'bold',
+    fontSize: 26,
+    height: 20,
+    color: 'white',
+    marginBottom: 4,
+  },
+  cardStyle: {
+    height: 100,
+    width: 300,
+    borderRadius: 20,
+    alignItems: 'flex-start',
+    padding: 5,
+  },
+  titleStyle: {
+    fontSize: 20,
+    padding: 5,
+    fontWeight: 'bold',
+  },
+  commentStyle: {
+    fontSize: 17,
+    padding: 5,
+    color: 'rgba(173,174,181,1)',
+    fontWeight: 'bold',
+  },
+  cardsContainer: {
+    marginVertical: 10,
+    backgroundColor: 'rgba(247,247,255,1)',
+  },
+  stateStyle: {
+    paddingHorizontal: 10,
+    height: 40,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderBottomRightRadius: 20,
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+  },
+  headerState: {
+    flexDirection: 'row',
+    width: 300,
+    marginBottom: 20,
+  },
+  txtState: {
+    color: '#fff',
+    fontWeight: 'bold',
+    fontSize: 18,
+  },
+  rightBlock: {
+    flex: 1,
+    flexDirection: 'row',
+    width: 300,
+    justifyContent: 'flex-end',
+  },
+  iconContainer: {
+    width: 40,
+    height: 40,
+    backgroundColor: 'rgba(222,232,253,1)',
+    borderRadius: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginHorizontal: 5,
+  },
+  flatListContainer:{flexDirection: 'row', marginRight: 20, flex: 1}
+});
